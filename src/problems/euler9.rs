@@ -1,7 +1,4 @@
 // Euler problem 9
-
-
-
 pub fn run() -> u64 {
     let mut a = 0;
     let mut b = 1;
