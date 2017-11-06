@@ -1,0 +1,8 @@
+[package]
+name = "euler"
+version = "0.1.0"
+authors = ["rHermes <teodor_spaeren@riseup.net>"]
+
+[dependencies]
+num = "0.1"
+time = "*"
