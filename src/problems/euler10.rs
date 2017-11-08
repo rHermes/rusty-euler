@@ -1,7 +1,7 @@
 // Euler problem 10
 
 pub fn run() -> u64 {
-    let mut is_prime = [true; 2_000_000];
+    let mut is_prime = vec![true; 2_000_000];
     is_prime[0] = false;
     is_prime[1] = false;
 

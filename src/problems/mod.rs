@@ -11,6 +11,10 @@ mod euler10;
 mod euler11;
 mod euler12;
 
+
+mod euler14;
+mod euler15;
+
 mod euler18;
 
 
@@ -53,23 +57,33 @@ pub fn n8() -> u64 {
     euler8::run()
 }
 
-// TODO(rHermes): Easy optimize. Right now just brute force.
 pub fn n9() -> u64 {
     euler9::run()
 }
 
-// TODO(rHermes): Easy optimize, better prime thing. Lot of memory, because
-// we allocate 2000000 bools, which is 1 byte. This requires 2GB then.
+
+// TODO(rHermes): Maybe optimize, better prime.
 pub fn n10() -> u64 {
     euler10::run()
 }
+
 
 pub fn n11() -> u64 {
     euler11::run()
 }
 
+// TODO(rHermes): Easy optimize, prime factor or sieve.
 pub fn n12() -> u64 {
     euler12::run()
+}
+
+// Easy pickings.
+pub fn n14() -> u64 {
+    euler14::run()
+}
+
+pub fn n15() -> u64 {
+    euler15::run()
 }
 
 pub fn n18() -> u64 {

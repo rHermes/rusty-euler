@@ -49,6 +49,9 @@ fn main() {
     eval_prob(problems::n11, 11, 70600674);
     eval_prob(problems::n12, 12, 76576500);
 
+    eval_prob(problems::n14, 14, 837799);
+    eval_prob(problems::n15, 15, 137846528820);
+
     eval_prob(problems::n18, 18, 1074);
 
     eval_prob(problems::n67, 67, 7273);
