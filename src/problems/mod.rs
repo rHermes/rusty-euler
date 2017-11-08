@@ -9,11 +9,16 @@ mod euler8;
 mod euler9;
 mod euler10;
 mod euler11;
+mod euler12;
 
 mod euler18;
 
 
 mod euler67;
+
+
+mod euler351;
+
 
 pub fn n1() -> u64 {
     euler1::run()
@@ -48,7 +53,7 @@ pub fn n8() -> u64 {
     euler8::run()
 }
 
-// TODO(rHermes): Easy optimize.
+// TODO(rHermes): Easy optimize. Right now just brute force.
 pub fn n9() -> u64 {
     euler9::run()
 }
@@ -63,10 +68,18 @@ pub fn n11() -> u64 {
     euler11::run()
 }
 
+pub fn n12() -> u64 {
+    euler12::run()
+}
+
 pub fn n18() -> u64 {
     euler18::run()
 }
 
 pub fn n67() -> u64 {
     euler67::run()
+}
+
+pub fn n351() -> u64 {
+    euler351::run()
 }
