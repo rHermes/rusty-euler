@@ -10,27 +10,44 @@
 
 extern crate num;
 extern crate time;
+extern crate chrono;
+extern crate term;
+
 use time::PreciseTime;
 
 mod problems;
 mod primes;
 
 fn eval_prob(f: fn() -> u64, n: u64, exp: u64) -> bool {
+    use std::io::prelude::*;
+
+    let mut t = term::stdout().unwrap();
+
     let start = PreciseTime::now();
     let ans = f();
     let end = PreciseTime::now();
     let re = ans == exp;
     if re {
-        println!("[PASS] [{}] Problem {}: {}", start.to(end), n, ans)
+        write!(t, "[").unwrap();
+        t.fg(term::color::GREEN).unwrap();
+        write!(t, "PASS").unwrap();
+        t.reset().unwrap();
+        writeln!(t, "] [{}] Problem {}: {}", start.to(end), n, ans).unwrap();
     } else {
-        println!(
-            "[FAIL] [{}] Problem {}: Expected {} got {}",
+        write!(t, "[").unwrap();
+        t.fg(term::color::RED).unwrap();
+        write!(t, "FAIL").unwrap();
+        t.reset().unwrap();
+        writeln!(
+            t,
+            "] [{}] Problem {}: Expected {} got {}",
             start.to(end),
             n,
             exp,
             ans
-        )
+        ).unwrap();
     }
+    t.reset().unwrap();
     re
 }
 
@@ -51,8 +68,11 @@ fn main() {
 
     eval_prob(problems::n14, 14, 837799);
     eval_prob(problems::n15, 15, 137846528820);
+    eval_prob(problems::n16, 16, 1366);
 
     eval_prob(problems::n18, 18, 1074);
+    eval_prob(problems::n19, 19, 171);
+    eval_prob(problems::n20, 20, 648);
 
     eval_prob(problems::n67, 67, 7273);
 

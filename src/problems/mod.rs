@@ -14,8 +14,11 @@ mod euler12;
 
 mod euler14;
 mod euler15;
+mod euler16;
 
 mod euler18;
+mod euler19;
+mod euler20;
 
 
 mod euler67;
@@ -86,8 +89,23 @@ pub fn n15() -> u64 {
     euler15::run()
 }
 
+// easy optimize, I don't know how to use the big num library yet.
+pub fn n16() -> u64 {
+    euler16::run()
+}
+
 pub fn n18() -> u64 {
     euler18::run()
+}
+
+// TODO(rHermes): Easy optimization, ger rid of chrono library.
+pub fn n19() -> u64 {
+    euler19::run()
+}
+
+// TODO(rHermes): Possible optimization, get rid of big int library.
+pub fn n20() -> u64 {
+    euler20::run()
 }
 
 pub fn n67() -> u64 {
